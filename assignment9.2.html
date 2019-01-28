@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function Airplane(model, seatingCapacity, maximumSpeed){
+			this.model = model;
+			this.seatingCapacity = seatingCapacity;
+			this.maximumSpeed = maximumSpeed;
+			this.inSeat = function() {
+				this.seatingCapacity -= "10";//decrease or increase the value
+			}
+		}
+		
+		var airplaneObj = new Airplane("A220", "260", "400");
+		airplaneObj.inSeat();
+		delete airplaneObj.maximumSpeed;//delete the Maxspeed for all obj.
+
+		airplaneObj['average_speed'] = '600';//add here new property
+		console.log(airplaneObj.average_speed);
+		
+		
+			
+		
+	</script>
+</body>
+</html>
